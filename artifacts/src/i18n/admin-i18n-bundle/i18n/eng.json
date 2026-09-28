@@ -494,7 +494,8 @@
             "btnTxt": "Ok"
         },
         "statuscheckFailed":"Failed",
-        "statuscheckCompleted":"Completed"
+        "statuscheckCompleted":"Completed",
+		"statuscheckInprogress":"In Progress"
 
     },
     "packet-upload":{
@@ -1409,6 +1410,10 @@
         "ADM-AVD-510" : "Applicant search limit exceeded",
         "ADM-AVD-511" : "Request id not found",
         "RPR-FIN-SUCCESS-001" :  "idrepo draft was published successfuly",
-        "RPR-FIN-FAILED-003":  "Exception occured updating idrepo draft.IDR-IDC-014 --> Handle record already exists in DB"
+        "RPR-FIN-FAILED-003":  "Exception occured updating idrepo draft.IDR-IDC-014 --> Handle record already exists in DB",
+		"RPR-PKCSUCCESS-001": "Packet Classification is Successful",
+        "RPR-CMD-SUCCESS-001": "CMD Validation is Successful",
+        "RPR-OVM-SUCCESS-001": "OPERATOR Validation is Successful",
+        "RPR-BEN-SUCCESS-001": "Biometric extraction was successful"
     }
 }

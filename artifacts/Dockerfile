@@ -177,6 +177,15 @@ ENV nprime_biosdk_lib_path=${base_path}/libs-release-local/nprime/
 RUN mkdir -p ${nprime_biosdk_lib_path}/windows-sdk
 COPY src/sdk/nprime-sdk/sdkDependency.zip ${nprime_biosdk_lib_path}/windows-sdk/
 
+#Tech5 Windows SDK
+ENV tech5-sdk_zip_path=${base_path}/libs-release-local/sdk/tech5-sdk
+COPY /src/sdk/tech5-sdk/* ${tech5-sdk_zip_path}/
+
+#Nuerotech sdk
+ENV neurotech_lib_zip_path=${base_path}/libs-release-local/neurotech/
+RUN mkdir -p ${neurotech_lib_zip_path}/windows-sdk
+COPY src/sdk/neurotech/sdk-dependency.zip ${neurotech_lib_zip_path}/windows-sdk/
+
 RUN cd ${work_dir} && mvn dependency:resolve && mvn clean install
 
 RUN bash configure.sh

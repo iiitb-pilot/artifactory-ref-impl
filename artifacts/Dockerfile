@@ -186,6 +186,11 @@ ENV neurotech_lib_zip_path=${base_path}/libs-release-local/neurotech/
 RUN mkdir -p ${neurotech_lib_zip_path}/windows-sdk
 COPY src/sdk/neurotech/sdkDependency.zip ${neurotech_lib_zip_path}/windows-sdk/
 
+# Document Scanner
+# environment variable for custom-impl jar path
+ENV custom_zip_path=${base_path}/libs-release-local/impl
+COPY /src/impl/* ${custom_zip_path}/
+
 RUN cd ${work_dir} && mvn dependency:resolve && mvn clean install
 
 RUN bash configure.sh
